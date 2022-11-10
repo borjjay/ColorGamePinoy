@@ -2,7 +2,7 @@
     padding: 0;
     margin: 0;
     outline: none;
-   
+
 }
 body{
     max-width: 300px;
@@ -17,9 +17,11 @@ body{
     width: 150px;
     height: 150px;
     transition: transform 300ms;
+    box-sizing: border-box;
 }
 .color:hover{
     transform: scale(0.9);
+    border: thick solid black;
 }
 .blue{
     background-color: blue;
@@ -43,10 +45,10 @@ body{
 
 
 
-   
 
 
-    
+
+
 #start{
     font-size: 2rem;
     height: 100px;
@@ -60,5 +62,5 @@ body{
     background-color: lightgreen;
 }
 #start:hover{
-    background-color: yellow; 
+    background-color: yellow;
 }
