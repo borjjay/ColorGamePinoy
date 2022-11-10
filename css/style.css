@@ -1,0 +1,64 @@
+*{
+    padding: 0;
+    margin: 0;
+    outline: none;
+   
+}
+body{
+    max-width: 300px;
+    margin: auto;
+    background-color: rgba(109, 91, 91, 0.164);
+}
+.top{
+    display: flex;
+    margin-top: 100px;
+}
+.color{
+    width: 150px;
+    height: 150px;
+    transition: transform 300ms;
+}
+.color:hover{
+    transform: scale(0.9);
+}
+.blue{
+    background-color: blue;
+}
+.red{
+    background-color: red;
+}
+.green{
+    background-color: green;
+}
+.yellow{
+    background-color: yellow;
+}
+.pink{
+    background-color: pink;
+}
+
+.white{
+    background-color: white;
+}
+
+
+
+   
+
+
+    
+#start{
+    font-size: 2rem;
+    height: 100px;
+    padding: 0.5rem 2rem;
+    border: 3px solid black;
+    border-radius: 0.3rem;
+    margin: 1rem auto;
+    display: block;
+}
+#start{
+    background-color: lightgreen;
+}
+#start:hover{
+    background-color: yellow; 
+}
