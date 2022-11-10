@@ -1,83 +1,30 @@
-let Start = document.querySelector("#start");
-Start.addEventListener("click" , pullColor);
+let selectedColor = '';
+const $availableColors = document.querySelectorAll('.color');
+const $playerPick = document.getElementById('playerPick');
+const $playBtn = document.getElementById('play');
 
-let blue = document.querySelector("#Blue");
-blue.addEventListener("click", Cblue);
+const colorsAvailable = ['blue', 'red', 'pink', 'green', 'yellow', 'white'];
+const winningColors = {};
 
-let red = document.querySelector("#Red");
-red.addEventListener("click", Cred);
-
-let pink = document.querySelector("#Pink");
-pink.addEventListener("click", Cpink);
-
-
-let green = document.querySelector("#Green");
-green.addEventListener("click", Cgreen);
-
-let yellow = document.querySelector("#Yellow");
-yellow.addEventListener("click", Cyellow);
-
-let white = document.querySelector("#White");
-white.addEventListener("click", cWhite);
-
-
-
-
-function Cblue () {
-    alert("you choose blue")
-    
-    
-  };
-  
-
-function Cred() {
-    alert("you choose RED")
-  };
-  
-  function Cpink() {
-    alert("you choose PINK")
-  };
-
-
-  
-
-function Cgreen() {
-    alert("you choose Green")
-  };
-  
-
-function Cyellow() {
-    alert("you choose Yellow")
-  };
-  
-
-function cWhite() {
-    alert("you choose White")
-  };
-  
-
-
-
-
-
-
-
-
-
-
-
-
-
-function pullColor(){
-    
-    //let colorinput = document.querySelector("#color1").value;
-   
-    
-    
-    
-    
-    
-    
-    
-    document.querySelector("#display").innerHTML = Math.ceil (Math.random()*1000);
+// Handle Player color selection, assign the selectedColor to the player choose
+const onPickColor = function(item) {
+  selectedColor = item.target.dataset.value;
+  $playerPick.innerText = selectedColor;
+  $playBtn.style.display = 'block';
 }
+
+// On Select By Player
+$availableColors.forEach(function (colorPicker) {
+  colorPicker.addEventListener('click', onPickColor);
+});
+
+// OnClick Play Button
+$playBtn.addEventListener('click', function(event){
+  winningColors.first = Math.floor(Math.random() * colorsAvailable.length);
+  winningColors.second = Math.floor(Math.random() * colorsAvailable.length);
+  winningColors.third = Math.floor(Math.random() * colorsAvailable.length);
+  console.log('winningColors-first', colorsAvailable[winningColors.first]);
+  console.log('winningColors-second', colorsAvailable[winningColors.second]);
+  console.log('winningColors-third', colorsAvailable[winningColors.third]);
+})
+
